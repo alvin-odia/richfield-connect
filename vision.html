@@ -291,6 +291,72 @@
         color: #030303;
         margin-top: 40px;
       }
+
+      .activity-section,
+      .engagement-section {
+        width: min(100%, 960px);
+        margin: 0 auto;
+        padding: 72px 20px;
+        text-align: center;
+      }
+
+      .activity-section {
+        background: #f8f7f3;
+        border-top: 1px solid rgba(203, 163, 98, 0.35);
+        border-bottom: 1px solid rgba(203, 163, 98, 0.35);
+      }
+
+      .activity-events,
+      .engagement-opportunities {
+        width: min(100%, 760px);
+        margin: 0 auto;
+      }
+
+      .activity-events h3,
+      .engagement-opportunities h3 {
+        margin-bottom: 24px;
+        color: #030303;
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .activity-events > p,
+      .engagement-opportunities > p {
+        margin: 0 auto 28px;
+        padding: 24px 28px;
+        background: linear-gradient(#ffffff, #ffffff) padding-box,
+          linear-gradient(110deg, #cba362, #7c9eb2, #cba362) border-box;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        color: #4f4f4f;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .activity-events ul,
+      .engagement-opportunities ul {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .activity-events li,
+      .engagement-opportunities li {
+        padding: 16px 20px;
+        background: #ffffff;
+        border: 1px solid rgba(203, 163, 98, 0.35);
+        border-left: 4px solid #cba362;
+        color: #333333;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .engagement-section {
+        background: #efeee9;
+      }
       
       
       img{
@@ -299,18 +365,6 @@
         border-radius: 5px;
         margin-top: 20px;
       }
-
-
-
-
-
-
-
-
-
-
-
-
 
       /*______________Footer section__________________*/
         :root {
@@ -569,42 +623,167 @@
             }
         }
 
-        .nav-bar {
-          width: 100%;
-          max-width: none;
-          padding: 18px clamp(20px, 7vw, 100px);
-        }
+          /* About page theme */
+          :root {
+            --about-ink: #151515;
+            --about-muted: #4f4f4f;
+            --about-paper: #f1f0eb;
+            --about-line: rgba(203, 163, 98, 0.45);
+          }
 
-        .logo-text {
-          flex: 0 0 300px;
-          width: 300px;
-          color: #2a2a2a;
-          font-family: 'Cinzel', Georgia, serif;
-          font-size: clamp(0.95rem, 1.4vw, 1.2rem);
-          font-weight: 600;
-          letter-spacing: 2px;
-          line-height: 1;
-          white-space: nowrap;
-        }
+          body {
+            min-height: 100vh;
+            padding: 0;
+            display: block;
+            background: var(--about-paper);
+            color: var(--about-ink);
+            font-family: 'Inter', Arial, sans-serif;
+          }
 
-        .nav-links {
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: flex-end;
-          row-gap: 10px;
-        }
+          .nav-bar {
+            width: 100%;
+            max-width: none;
+            padding: 18px clamp(20px, 7vw, 100px);
+          }
 
-        .nav-links a {
-          margin-left: 0;
-          color: #555;
-        }
+          .logo-text {
+            flex: 0 0 300px;
+            width: 300px;
+            color: #2a2a2a;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 1;
+            white-space: nowrap;
+          }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-          color: #a47734;
-        }
+          .nav-links {
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            row-gap: 10px;
+          }
 
-        @media (max-width: 760px) {
+          .nav-links a {
+            margin-left: 0;
+            color: #555;
+          }
+
+          .nav-links a:hover,
+          .nav-links a.active {
+            color: #a47734;
+          }
+
+          .about-section {
+            width: min(100% - 40px, 1120px);
+            margin: 0 auto;
+            padding: clamp(64px, 9vw, 120px) 0 110px;
+          }
+
+          .about-section::before {
+            content: "ABOUT THE SOCIETY";
+            display: block;
+            margin-bottom: 18px;
+            color: #a47734;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-align: center;
+          }
+
+          .about-section h2,
+          .about-section h3 {
+            color: var(--about-ink);
+            font-family: 'Cinzel', Georgia, serif;
+            font-weight: 500;
+          }
+
+          .about-section .welcome,
+          .about-section .Purpose,
+          .about-section .values {
+            width: min(100%, 900px);
+            margin: 0 auto;
+          }
+
+          .about-section .h2-1 {
+            margin-bottom: 30px;
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            line-height: 1.15;
+          }
+
+          .about-section p,
+          .about-section li {
+            color: var(--about-muted);
+            font-size: 20px;
+            line-height: 1.8;
+          }
+
+          .about-section .p-1 {
+            max-width: none;
+            margin: 0 0 22px;
+            font-family: 'Inter', Arial, sans-serif;
+          }
+
+          .story-content {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            margin-top: 72px;
+          }
+
+          .story-section,
+          .mission-section,
+          .member-section,
+          .Purpose,
+          .values {
+            padding: 34px;
+            background: rgba(255, 255, 255, 0.7);
+            border-top: 3px solid var(--about-line);
+          }
+
+          .about-section h3 {
+            margin-bottom: 18px;
+            font-size: 1.45rem;
+          }
+
+          .story-section p + p,
+          .mission-section p + p,
+          .member-section p + p,
+          .Purpose p + p {
+            margin-top: 20px;
+          }
+
+          .member-section {
+            grid-column: 1 / -1;
+            margin-top: 0;
+          }
+
+          .member-section > span {
+            display: block;
+            margin-bottom: 18px;
+            color: #a47734;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 1.45rem;
+          }
+
+          .Purpose,
+          .values {
+            margin-top: 28px;
+          }
+
+          .values ul {
+            display: grid;
+            gap: 14px;
+            padding-left: 28px;
+            margin-top: 18px;
+          }
+
+          .values li strong {
+            color: var(--about-ink);
+          }
+
+          @media (max-width: 760px) {
             .nav-bar {
               align-items: flex-start;
               flex-direction: column;
@@ -621,10 +800,39 @@
               width: auto;
               font-size: 1rem;
             }
-        }
+
+            .story-content {
+              grid-template-columns: 1fr;
+              margin-top: 48px;
+            }
+
+            .member-section {
+              grid-column: auto;
+            }
+          }
+
+          @media (max-width: 520px) {
+            .about-section {
+              width: min(100% - 28px, 1120px);
+            }
+
+            .story-section,
+            .mission-section,
+            .member-section,
+            .Purpose,
+            .values {
+              padding: 26px 22px;
+            }
+
+            .about-section p,
+            .about-section li {
+              font-size: 20px;
+            }
+          }
  
 </style>
 </head>
+
 <body>
 
    <!--__________________Navigation bar Section____________________________ -->
@@ -641,203 +849,45 @@
             <a href="#">Resources</a>
             <a href="#">Contact</a>
             <a href="#">
-            <button class="join-in">JOIN THE MISSION</button>
+              <button class="join-in">JOIN THE MISSION</button>
             </a>
         </nav>
     </header>
- 
-<div class="stars">
 
-</div>
- 
-<!--____________________Hero Section_____________________-->
-<section class="hero">
-  <div class="hero-scene"></div>
-  <div class="skyline" id="skyline"></div>
-  <div class="hero-content">
-    <h1>THE MENSAN ELITE<br>SOCIETY</h1>
-    <div class="hero-rule"></div>
-    <p class="hero-sub">An elite civilisation of intelligent and self-governed minds.</p>
-  </div>
-  <div class="scroll-cue"><div class="stem"></div>Enter</div>
-</section>
-
- 
-<!--_____ Section 1__________ -->
-<main class="main-content" id="section-1">
-<section class="welcome">
-  <h2 class="mark">Welcome !</h2>
-  <p>You are crossing the line that separates humans from obedience to authority and entering a society of higher-order and elite civilisation, composed of intelligent beings, disciplined, elite minded, self-governed and committed innovators.</p>
-  <p>A step into this society is the exit from the lower circle of the world systems of human beings and the entrance into the higher systems of intelligent beings inspired by the astral higher civilisation. Here, we set and align with our goals, eliminate contrast and create our desired lifestyle.</p>
-  <p>Our social life holds no judgement, no hierarchy, no commands and no distinguished social class, for consciousness puts us on the same line.<br></p>
-  <span class="close-line"><strong>Welcome. Find more about our world below.</strong></span>
-</section>
- 
- </main>
-
-<section class="institute-section" id="about">
-  <div class="section-head">
-    
-    <h2 class="h2-1">Explore our dedicated Institute</h2>
-    <p class="p-1">Select a portal below to enter a room and read about our society, institute, or vision.</p>
-  </div>
-  <nav class="doors">
-    <a class="door" href="about.html">
-      <span class="dnum">I</span><br><br>
-      <span class="dtitle">Who Are the Mensan Elites Society?<br></span><br>
-      <span class="darrow" href="about.html">enter &rarr;</span>
-    </a>
-    <a class="door" href="institute.html">
-      <span class="dnum">II<br></span><br>
-      <span class="dtitle">The Mensan Elites Institute<br></span><br>
-      <span class="darrow" href="institute.html">enter &rarr;</span>
-    </a>
-    <a class="door" href="vision.html">
-      <span class="dnum">III<br></span><br>
-      <span class="dtitle">Our Vision and Goal<br></span><br>
-      <span class="darrow" href="vision.html">enter &rarr;</span>
-    </a>
-  </nav>
-  <section class="institute-details" aria-label="Institute information">
-    <article class="room-panel" id="room-who">
-      <h3>Who Are the Mensan Elites Society?</h3>
-      <p>The Mensan Elites Society is a community of disciplined, self-governed thinkers committed to learning, creativity, and meaningful contribution.</p>
-    </article>
-    <article class="room-panel" id="room-institute">
-      <h3>The Mensan Elites Institute</h3>
-      <p>The Institute is our center for research, discussion, and shared knowledge. Members explore ideas across disciplines and turn rigorous thought into useful work.</p>
-    </article>
-    <article class="room-panel" id="room-vision">
-      <h3>Our Vision and Goal</h3>
-      <p>We aim to build a culture where intelligence is guided by responsibility, collaboration, and a steady commitment to improving the systems around us.</p>
-    </article>
-  </section>
-</section>
- 
-<!--_________ The works of the mensan Section_________-->
-<main class="work-section" id="works">
-  <div class="section-head">
-    <h2>The Works of Mensans</h2>
-    <p>A curated catalog of recent publications and monographs authored by the distinguished fellows of our society.</p>
-  </div>
-  <section class="work-book-section">
-    <div class="work-book">
-      <img src="Horison.png" alt="book cover">
-      <h3>Synthesizing The cognitive Horizon</h3>
-      <p>Dr. Alistair Vance, Fellow '14</p>
-    </div>
-    <div class="work-book">
-      <img src="math.png" alt="book cover">
-      <h3>The Math of Natural Concord</h3>
-      <p>Prof. Clara Sterling, Fellow '19</p>
-    </div>
-    <div class="work-book">
-      <img src="state.png" alt="book cover">
-      <h3>Epistemology of The Future State</h3>
-      <p>Hon. Jonathan Vance, Fellow '08</p>
-    </div>
-    <div class="work-book">
-      <img src="Visions.png" alt="book cover">
-      <h3>Visions of Cohesive Civilizations</h3>
-      <p>Dame Evelyn Rosier, Fellow '12</p>
-    </div>
-
-</section>
-    
-
-
-</main>
- 
-
- 
-<!--__________The Rooms Section__________-->
-
- 
-
- 
- 
-
- 
-
- 
-<!--_________ The activities of the mensan section _________-->
-
-
-
-<section> 
-  <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="subtitle">The Grand Registry</div>
-            <h1>The Activities</h1>
-            <p>Preserving the standards of excellence through daily active contribution, collaborative circles, and global stewardship.</p>
-        </header>
-
-        
-
-        <!-- ______________Activities Grid________________-->
-        <section class="cards-grid">
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-tag">Proceedings</span>
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="8" r="6"/>
-                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
-                    </svg>
-                </div>
-                <h3>Annual Symposium</h3>
-                <p>Our signature gathering where fellows present groundbreaking research and debate cross-disciplinary theories.</p>
+    <main>
+        <section class="vision-section">
+            <div class="section-head">
+                <h2 class="h2-1">Our Vision</h2>
+                <p class="p-1">The Mensan Elites Society envisions a world where intellectual curiosity, academic excellence, and philosophical inquiry are celebrated and nurtured. We strive to create a global community of scholars, thinkers, and innovators who are committed to advancing knowledge, fostering critical thinking, and promoting the preservation of human intelligence for the betterment of society.</p>
             </div>
 
-
-
-            <!--________________ Card 2____________________ -->
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-tag">Endowments</span>
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="8" r="6"/>
-                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
-                    </svg>
+            <div class="work-section">
+                <div class="section-head">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to provide a platform for individuals of exceptional intellectual ability to engage in meaningful discourse, collaborate on scholarly endeavors, and contribute to the advancement of human knowledge. We aim to cultivate a culture of lifelong learning, ethical responsibility, and social impact through our programs, events, and initiatives.</p>
                 </div>
-                <h3>Research Grants</h3>
-                <p>Providing substantial funding to cognitive pioneers and scientific projects pushing past classical boundaries.</p>
-            </div>
-
-
-            <!--_________________Card 3____________________ -->
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-tag">Legacy</span>
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="8" r="6"/>
-                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
-                    </svg>
-                </div>
-                <h3>Mentorship Program</h3>
-                <p>Connecting exceptional youth with decorated senior academics for intensive conceptual guidance.</p>
-            </div>
-
-            <!--_______________Card 4___________________ -->
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-tag">Alliance</span>
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="8" r="6"/>
-                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
-                    </svg>
-                </div>
-                <h3>Global Summit</h3>
-                <p>Collaborative assemblies with world leaders to deploy scientific and ethical paradigms for societal benefit.</p>
             </div>
         </section>
-        
 
-        <!-- __________________Footer_________________-->
+        <section class="mission-section" id="mission-content">
+            <div class="section-mission">
+                <h2 class="h2-1">Our Goals</h2>
+                <p class="p-1">The Mensan Elites Society is dedicated to achieving the following goals:</p>
+                <ul>
+                    <li>Foster a global network of intellectually gifted individuals who can collaborate and share knowledge.</li>
+                    <li>Promote academic excellence and support research initiatives across various disciplines.</li>
+                    <li>Encourage philosophical inquiry and critical thinking through discussions, debates, and publications.</li>
+                    <li>Preserve and advance human intelligence by providing educational resources and mentorship opportunities.</li>
+                    <li>Engage with the broader community to address societal challenges and contribute to the betterment of humanity.</li>
+                </ul>
+            </div>
+        
+    </main>
+
+    <!-- __________________Footer_________________-->
         <footer>
-            <div class="footer-top">
-                <div class="footer-brand">
+          <div class="footer-top">
+            <div class="footer-brand">
                     <div class="logo">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="8" r="6"/>
@@ -864,29 +914,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 The Mensan Elites Society. All rights reserved.</p>
                 <p>Ad Veritas et Incrementum Scientiae</p>
-            </div>
+            </div> 
         </footer>
-
-
-        <!-- ___________________Welcome Banner/Box__________________ -->
-        <div class="welcome-box">
-            <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M15 9l-6 6M9 9l6 6"/>
-            </svg>
-            <p>
-                Welcome to <span class="highlight">The Mensan Elites Society</span> &mdash; a distinguished community of exceptional minds dedicated to intellectual excellence, collaboration, and the advancement of human knowledge. Here, brilliance is nurtured, shared, and directed toward answering the greatest questions of our age.
-            </p>
-        </div>
-    </div>
-
-</section>
-
- 
-<script>
- 
-</script>
- 
-</body>
-</html>
-
+    </body>
+    </html>
