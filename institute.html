@@ -13,14 +13,32 @@
 <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        body {
+          font-family: 'Inter', Arial, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Cinzel', Georgia, serif;
+          letter-spacing: 0.04em;
+        }
+
+        p, li, span, a, button, input, textarea {
+          font-family: 'Inter', Arial, sans-serif;
+        }
+
         a { text-decoration: none; color: inherit; }
-        .nav-bar { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-bar {
+          width: 100%;
+          max-width: none;
+          margin: 0;
+          padding: 18px clamp(20px, 7vw, 100px);
+        }
 
         /* ______________________Header____________________*/
         header { padding: 20px 0; border-bottom: 1px solid rgba(255,215,0,0.1); display: flex; justify-content: space-between; align-items: center; }
         .nav-links a { margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #a0aec0; transition: color 0.3s; }
         .nav-links a:hover { color: #767258; }
-        .logo-text { font-family: 'Times New Roman', serif; letter-spacing: 2px; color: #ffd700; }
+        .logo-text { font-family: 'Times New Roman', serif; letter-spacing: 2px; color: #f4f1e1; }
         
         /* __________________ Navbar Container__________________ */
         .nav-bar {
@@ -28,7 +46,7 @@
           justify-content: space-between;
           align-items: center;            
           padding: 20px 10%;              
-          background-color: #ffffff;
+          background-color: #0b1f3a;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
           position: sticky;               
           top: 0;
@@ -39,7 +57,7 @@
         .logo {
           font-size: 15px;
           font-weight: 700;
-          color: #333333;
+          color: #f4f1e1;
           letter-spacing: 1px;
           cursor: pointer;
         }
@@ -53,7 +71,7 @@
 
         /* __________________Individual Link Styling______________________*/
         .nav-links a {
-          color: #666666;
+          color: #f4f1e1;
           font-size: 14px;
           font-weight: 500;
           transition: color 0.3s ease; 
@@ -62,7 +80,7 @@
         /*__________________Hover & Active States_____-__________ */
         .nav-links a:hover,
         .nav-links a.active {
-          color: #007bff; 
+          color: #d4af37;
           }
 
           .join-in{
@@ -231,6 +249,19 @@
         margin-bottom: 20px;
 
        }
+
+       .section-kicker,
+       .page-kicker {
+        display: block;
+        margin-bottom: 12px;
+        color: #a47734;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: 'Cinzel', Georgia, serif;
+        text-align: center;
+       }
        
        .h2-1{
         text-align: center;
@@ -238,12 +269,13 @@
         font-size: 2rem;
         font-weight: bold;
         color: #030303;
+        font-family: 'Cinzel', Georgia, serif;
        }
       .p-1{
         font-size: 1.25rem;
         color: #030303;
         margin: 10px auto 0;
-        font-family: 'lucida sans', Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         max-width: 760px;
       }
       .dnum{
@@ -290,6 +322,7 @@
         font-weight: bold;
         color: #030303;
         margin-top: 40px;
+        font-family: 'Cinzel', Georgia, serif;
       }
 
       .activity-section,
@@ -301,7 +334,7 @@
       }
 
       .activity-section {
-        background: #f8f7f3;
+        background: #f1f0eb;
         border-top: 1px solid rgba(203, 163, 98, 0.35);
         border-bottom: 1px solid rgba(203, 163, 98, 0.35);
       }
@@ -355,7 +388,7 @@
       }
 
       .engagement-section {
-        background: #efeee9;
+        background: #f1f0eb;
       }
       
       
@@ -649,7 +682,7 @@
           .logo-text {
             flex: 0 0 300px;
             width: 300px;
-            color: #2a2a2a;
+            color: #f4f1e1;
             font-family: 'Cinzel', Georgia, serif;
             font-size: clamp(0.95rem, 1.4vw, 1.2rem);
             font-weight: 600;
@@ -667,12 +700,12 @@
 
           .nav-links a {
             margin-left: 0;
-            color: #555;
+            color: #f4f1e1;
           }
 
           .nav-links a:hover,
           .nav-links a.active {
-            color: #a47734;
+            color: #d4af37;
           }
 
           .about-section {
@@ -843,10 +876,9 @@
             <a href="about.html">About</a>
             <a href="institute.html">Institute</a>
             <a href="vision.html">Vision</a>
-            <a href="#">Library</a>
+            <a href="index.html#works">Library</a>
             <a href="#">Gallery</a>
             <a href="#">Activities</a>
-            <a href="#">Resources</a>
             <a href="#">Contact</a>
             <a href="join.html">
             <a href="#join-form-section" class="join-in"> JOIN THE MISSION</a>   
@@ -864,6 +896,7 @@
 
         <section class="institute-section">
             <div class="section-head">
+                <span class="section-kicker">The Institute</span>
                 <h2 class="h2-1">About the Institute</h2>
                 <p class="p-1">The Mensan Elites Institute is a premier institution committed to fostering intellectual growth and scholarly excellence. Our mission is to cultivate a community of thinkers, innovators, and leaders who are dedicated to advancing human understanding and contributing positively to society.</p>
             </div>
@@ -888,6 +921,7 @@
 
         <section class="activity-section">
             <div class="activity-events">
+                <span class="section-kicker">The Institute Calendar</span>
                 <h3> Activity & Events</h3>
                 <p>The Mensan Elites Institute hosts a variety of activities and events that encourage intellectual engagement, collaboration, and the exchange of ideas among scholars and enthusiasts.</p>
 
@@ -902,6 +936,7 @@
 
         <section class="engagement-section">
             <div class="engagement-opportunities">
+                <span class="section-kicker">The Fellowship</span>
                 <h3>Engagement Opportunities</h3>
                 <p>The Mensan Elites Institute offers various engagement opportunities for individuals interested in contributing to the advancement of knowledge and participating in scholarly activities.</p>
 
