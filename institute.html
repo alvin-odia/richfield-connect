@@ -862,6 +862,217 @@
               font-size: 20px;
             }
           }
+
+          /* Shared Mensan visual system */
+          :root {
+            --site-navy: #0b1f3a;
+            --site-cream: #f1f0eb;
+            --site-gold: #cba362;
+            --site-ink: #151515;
+            --site-muted: #4f4f4f;
+          }
+
+          body {
+            min-width: 320px;
+            overflow-x: hidden;
+            background: var(--site-cream);
+          }
+
+          .nav-bar {
+            min-height: 72px;
+            padding: 16px clamp(20px, 5vw, 72px);
+            border-bottom: 1px solid rgba(203, 163, 98, 0.28);
+            box-shadow: 0 8px 24px rgba(5, 12, 25, 0.22);
+          }
+
+          .nav-links a {
+            position: relative;
+            padding: 8px 0;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+          }
+
+          .nav-links a:not(.join-in)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 1px;
+            left: 0;
+            height: 1px;
+            background: #d4af37;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.25s ease;
+          }
+
+          .nav-links a:not(.join-in):hover::after,
+          .nav-links a:not(.join-in):focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+
+          .join-in {
+            padding: 11px 18px !important;
+            border: 1px solid #d4af37;
+            border-radius: 2px;
+            background: transparent;
+            color: #f4f1e1 !important;
+            transition: background-color 0.25s ease, color 0.25s ease;
+          }
+
+          .join-in:hover,
+          .join-in:focus-visible {
+            background: #ffd700;
+            color: var(--site-navy) !important;
+          }
+
+          .hero {
+            min-height: min(620px, calc(100vh - 72px));
+            height: auto;
+          }
+
+          .hero-content {
+            width: min(100% - 40px, 820px);
+            padding: 72px 0;
+          }
+
+          .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 4.8rem);
+            line-height: 1.12;
+            letter-spacing: 0.08em;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.42);
+          }
+
+          .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #f4f1e1;
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            line-height: 1.7;
+          }
+
+          .institute-section,
+          .activity-section,
+          .engagement-section {
+            width: min(100% - 40px, 1120px);
+            margin: 0 auto;
+            padding: clamp(64px, 8vw, 104px) 0;
+          }
+
+          .section-head {
+            width: min(100%, 820px);
+            margin: 0 auto 42px;
+            text-align: center;
+          }
+
+          .section-head h2,
+          .h2-1 {
+            color: var(--site-ink);
+            font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+            line-height: 1.25;
+          }
+
+          .section-head p,
+          .p-1 {
+            color: var(--site-muted);
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            line-height: 1.75;
+          }
+
+          .institute-details,
+          .activity-events,
+          .engagement-opportunities {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+          }
+
+          .room-panel,
+          .activity-card,
+          .engagement-card {
+            height: 100%;
+            padding: 30px;
+            border-top: 3px solid rgba(203, 163, 98, 0.65);
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 12px 28px rgba(11, 31, 58, 0.07);
+          }
+
+          .room-panel h3,
+          .activity-card h3,
+          .engagement-card h3 {
+            color: var(--site-ink);
+            margin-bottom: 14px;
+          }
+
+          .room-panel p,
+          .activity-card p,
+          .engagement-card p {
+            color: var(--site-muted);
+            line-height: 1.75;
+          }
+
+          footer {
+            width: min(100%, 1180px);
+            margin: 0 auto;
+            padding: 56px 20px 28px;
+          }
+
+          @media (max-width: 900px) {
+            .institute-details,
+            .activity-events,
+            .engagement-opportunities {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+          }
+
+          @media (max-width: 760px) {
+            .nav-bar {
+              align-items: flex-start;
+              flex-direction: column;
+              gap: 14px;
+            }
+
+            .nav-links {
+              width: 100%;
+              justify-content: flex-start;
+              gap: 8px 16px;
+            }
+
+            .nav-links a {
+              font-size: 0.7rem;
+            }
+
+            .join-in {
+              padding: 9px 12px !important;
+            }
+
+            .hero {
+              min-height: 560px;
+            }
+          }
+
+          @media (max-width: 550px) {
+            .institute-details,
+            .activity-events,
+            .engagement-opportunities {
+              grid-template-columns: 1fr;
+            }
+
+            .institute-section,
+            .activity-section,
+            .engagement-section {
+              width: min(100% - 28px, 1120px);
+            }
+
+            .section-head {
+              text-align: left;
+            }
+
+            .section-kicker,
+            .section-head h2 {
+              text-align: left;
+            }
+          }
  
 </style>
 </head>
@@ -877,12 +1088,9 @@
             <a href="institute.html">Institute</a>
             <a href="vision.html">Vision</a>
             <a href="index.html#works">Library</a>
-            <a href="#">Gallery</a>
-            <a href="#">Activities</a>
+            <a href="#activities-section">Activities</a>
             <a href="#">Contact</a>
-            <a href="join.html">
-            <a href="#join-form-section" class="join-in"> JOIN THE MISSION</a>   
-            </a>
+            <a href="#join-form-section" class="join-in"> JOIN THE MISSION</a>
         </nav>
     </header>
 
@@ -981,5 +1189,6 @@
                 <p>Ad Veritas et Incrementum Scientiae</p>
             </div>
         </footer>
+        </main>
         </body>
         </html>

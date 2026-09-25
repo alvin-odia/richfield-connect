@@ -813,6 +813,154 @@
               font-size: 20px;
             }
           }
+
+          /* Shared Mensan visual system */
+          :root {
+            --site-navy: #0b1f3a;
+            --site-cream: #f1f0eb;
+            --site-gold: #cba362;
+            --site-ink: #151515;
+            --site-muted: #4f4f4f;
+          }
+
+          body {
+            min-width: 320px;
+            overflow-x: hidden;
+            background: var(--site-cream);
+          }
+
+          .nav-bar {
+            min-height: 72px;
+            padding: 16px clamp(20px, 5vw, 72px);
+            border-bottom: 1px solid rgba(203, 163, 98, 0.28);
+            box-shadow: 0 8px 24px rgba(5, 12, 25, 0.22);
+          }
+
+          .nav-links a {
+            position: relative;
+            padding: 8px 0;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+          }
+
+          .nav-links a:not(.join-in)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 1px;
+            left: 0;
+            height: 1px;
+            background: #d4af37;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.25s ease;
+          }
+
+          .nav-links a:not(.join-in):hover::after,
+          .nav-links a:not(.join-in):focus-visible::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+
+          .join-in {
+            padding: 11px 18px !important;
+            border: 1px solid #d4af37;
+            border-radius: 2px;
+            background: transparent;
+            color: #f4f1e1 !important;
+            transition: background-color 0.25s ease, color 0.25s ease;
+          }
+
+          .join-in:hover,
+          .join-in:focus-visible {
+            background: #ffd700;
+            color: var(--site-navy) !important;
+          }
+
+          .about-section {
+            width: min(100% - 40px, 1120px);
+            padding: clamp(70px, 9vw, 120px) 0 110px;
+          }
+
+          .about-section::before {
+            margin-bottom: 22px;
+            color: var(--site-gold);
+          }
+
+          .about-section .h2-1 {
+            margin-bottom: 30px;
+            color: var(--site-ink);
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            line-height: 1.15;
+          }
+
+          .about-section p,
+          .about-section li {
+            color: var(--site-muted);
+            font-size: clamp(1rem, 1.6vw, 1.18rem);
+            line-height: 1.85;
+          }
+
+          .story-content {
+            gap: 24px;
+            margin-top: 64px;
+          }
+
+          .story-section,
+          .mission-section,
+          .member-section,
+          .Purpose,
+          .values {
+            border-top: 3px solid rgba(203, 163, 98, 0.65);
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 12px 28px rgba(11, 31, 58, 0.07);
+          }
+
+          .about-section h3 {
+            color: var(--site-ink);
+          }
+
+          footer {
+            width: min(100%, 1180px);
+            margin: 0 auto;
+            padding: 56px 20px 28px;
+          }
+
+          @media (max-width: 760px) {
+            .nav-bar {
+              align-items: flex-start;
+              flex-direction: column;
+              gap: 14px;
+            }
+
+            .nav-links {
+              width: 100%;
+              justify-content: flex-start;
+              gap: 8px 16px;
+            }
+
+            .nav-links a {
+              font-size: 0.7rem;
+            }
+
+            .join-in {
+              padding: 9px 12px !important;
+            }
+          }
+
+          @media (max-width: 520px) {
+            .about-section {
+              width: min(100% - 28px, 1120px);
+            }
+
+            .story-section,
+            .mission-section,
+            .member-section,
+            .Purpose,
+            .values {
+              padding: 26px 22px;
+            }
+          }
  
 </style>
 </head>
@@ -827,12 +975,9 @@
             <a href="institute.html">Institute</a>
             <a href="vision.html">Vision</a>
             <a href="index.html#works">Library</a>
-            <a href="#">Gallery</a>
-            <a href="#">Activities</a>
+            <a href="#activities-section">Activities</a>
             <a href="#">Contact</a>
-            <a href="join.html">
-            <a href="#join-form-section" class="join-in"> JOIN THE MISSION</a>   
-            </a>
+            <a href="#join-form-section" class="join-in"> JOIN THE MISSION</a>
         </nav>
     </header>
     
